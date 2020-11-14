@@ -95,6 +95,7 @@ public:
 	void insertar_antes(const T &, iterador const &);
 	void insertar_despues(const T &, iterador const &);
 	void borrar(const T &);
+	void borrartodo();
 	lista const &operator=(lista const &);
 
 	// Esta clase provee métodos para generar iteradores preposicionados
@@ -399,6 +400,18 @@ void lista<T>::borrar(const T &t)
 
 			tam_--;
 		}
+	}
+}
+
+void lista<T>::borrartodo() 
+{
+	nodo *iter, *sig=0;
+
+	for (iter = pri_; iter != 0; iter = sig)
+	{
+		sig = iter->sig_;
+		delete iter;
+		tam_--;
 	}
 }
 
