@@ -6,31 +6,31 @@
 
 #include <lista.h>
 
-
 template <class T>
-class Queue {
+class Cola {
 public:
-    Queue() { 
+    Cola() { 
     }
     void clear() {
-        lst.clear();
+        lst.borrartodo();
     }
     bool isEmpty() const { 
-        return lst.empty();  
+        return lst.vacia();  
     }
     T& front() { 
         return lst.front();  
     }
-    T dequeue() {
+    T desencolar() {
         T el = lst.front();
         lst.pop_front();
         return el;
     }
-    void enqueue(const T& el) {
+    void encolar(const T& el) {
         lst.push_back(el);
     }
 private:
     lista <T> lst;
+	lista <Transaction *>::iterador it(lst);
 };
 
 #endif

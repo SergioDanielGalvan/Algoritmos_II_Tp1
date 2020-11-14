@@ -424,7 +424,7 @@ typename lista<T>::iterador lista<T>::ultimo() const
 template<typename T>
 typename lista<T>::iterador lista<T>::primero() const
 {
-        return typename lista<T>::iterador(pri_);
+	return typename lista<T>::iterador(pri_);
 }
 
 template<typename T>
@@ -463,6 +463,5 @@ lista<T> const &lista<T>::operator=(lista const &orig)
 
 	return *this;
 }
-
 
 #endif
