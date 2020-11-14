@@ -196,6 +196,13 @@ std::string Block::RecalculoHash( void ) {
 }
 
 std::string Block::ArbolMerkle( void ) {
+	/*
+	   Dudas
+	   Utilizar recursividad plantea un aumento de espacio con la misma complejidad log(n)
+	   Utilizar iteraciones combinado con el uso de un vector inplace() elimina el aumento de espacio con la misma complejidad
+	   Que pasa con la última transaccion si es impar? se asume que la de al lado es un string vacío y se hace un sha256?
+	     o se transfiere sin ejecutar un sha256 de nuevo.
+	*/
 	std::string cadena = "";
 	if ( ! this->ListaTran.vacia() ) {
 		
