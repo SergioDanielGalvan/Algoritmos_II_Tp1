@@ -104,10 +104,7 @@ public:
 	// el TDA iterador, buscamos facilitar las expresiones de corte o
 	// continuación de los ciclos de iteración. Por ejemplo,
 	//
-	// lista<int>::iterador it;
-	// ...
-	// for( it = L.ultimo(); !it.extremo(); it.retroceder()) {
-	// 	// ...
+
 	// }
 	// 
 	// También,

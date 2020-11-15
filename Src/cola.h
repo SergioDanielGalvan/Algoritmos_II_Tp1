@@ -1,5 +1,5 @@
 //**********************  cola.h  *************************
-//     Cola generica implementada con lista.h 
+//     Cola genérica implementada con lista.h 
 
 #ifndef COLA_H_
 #define COLA_H_
@@ -18,15 +18,18 @@ public:
         return lst.vacia();  
     }
     T& front() { 
-        return lst.front();  
+		it.ultimo():
+        return it.dato();
     }
     T desencolar() {
-        T el = lst.front();
-        lst.pop_front();
+		it.ultimo():
+        T el = it.dato();
+        lst.borrar( el );
         return el;
     }
     void encolar(const T& el) {
-        lst.push_back(el);
+		it.primero();
+		lst.insertar_antes( el, it );
     }
 private:
     lista <T> lst;
@@ -34,3 +37,8 @@ private:
 };
 
 #endif
+
+	// lista<int>::iterador it;
+	// ...
+	// for( it = L.ultimo(); !it.extremo(); it.retroceder()) {
+	// 	// ...
